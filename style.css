@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(145, 64, 6, 0.477),rgba(151, 75, 0, 0.657)),
+                    url(./logo-pic/Fog-picture.jpeg);
+  background-size: cover;
+  background-position: 0px 5px;
+  position: relative;
+  color: #555;
+}
+
+
+
+.dice {
+  width: 100px;
+  height: 100px;
+}
