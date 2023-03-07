@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +7,13 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 70%;
   box-sizing: border-box;
 }
 
 body {
+  font-family: 'Lato';
+  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,13 +22,109 @@ body {
                     url(./logo-pic/Fog-picture.jpeg);
   background-size: cover;
   background-position: 0px 5px;
-  position: relative;
   color: #555;
 }
 
+main {
+  display: flex;
+  position: relative;
+  width: 125rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.80);
+  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.573);
+  overflow: hidden;
+}
 
+.player {
+  flex: 50%;
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  position: relative;
+  font-size: 3.8rem;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+  font-weight: 100;
+  margin-bottom: 2rem;
+}
+
+.score {
+  font-size: 7rem;
+  font-weight: 100;
+  color: rgba(227, 37, 37, 0.885);
+  margin-bottom: auto;
+}
+
+/* .player--active {
+
+} */
+
+.current {
+  background-color: rgba(227, 37, 37, 0.885);
+  opacity: 0.85;
+  width: 30%;
+  padding: 1.4rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+.current-score {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.btn {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  color: #555;
+  font-family: 'Lato';
+  font-size: 27px;
+  cursor: pointer;
+  font-weight: 100;
+  transition: color 0.25s;
+  transition: background-color 0.25s;
+}
+.btn:hover {
+  font-weight: 300;
+}
+.btn:hover i {
+  margin-right: 20px;
+}
+
+i {
+  color: rgba(227, 37, 37, 0.885);
+  margin-right: 15px;
+  font-size: 32px;
+  transition: margin 0.25s;
+}
+
+.btn-new {
+  top: 35px;
+}
+.btn-roll {
+  top: 450px;
+}
+.btn-hold {
+  top: 530px;
+}
 
 .dice {
   width: 100px;
   height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  transform: translateX(-50%);
+  
 }
