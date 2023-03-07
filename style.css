@@ -54,15 +54,27 @@ main {
 }
 
 .score {
-  font-size: 7rem;
+  font-size: 8rem;
   font-weight: 100;
   color: rgba(227, 37, 37, 0.885);
   margin-bottom: auto;
 }
 
-/* .player--active {
+.player--active {
+  background-color: rgba(154, 153, 153, 0.344);
+}
+.player--active .name {
+  font-weight: 300;
+}
 
-} */
+.player--active .name::after {
+  content:"\2022";
+  font-size: 50px;
+  position: absolute;
+  top: -8px;
+  right: -50px;
+  color: rgba(227, 37, 37, 0.885);
+}
 
 .current {
   background-color: rgba(227, 37, 37, 0.885);
