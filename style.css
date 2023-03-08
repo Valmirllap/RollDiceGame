@@ -140,3 +140,14 @@ i {
   transform: translateX(-50%);
   
 }
+
+.hidden {
+  display: none;
+}
+
+.winner {
+  background-color: gold;
+}
+.winner .name, .winner .score {
+  font-weight: 700;
+}
