@@ -65,5 +65,6 @@ btnHold.addEventListener(`click`, function () {
     }
     nextPlayer();
   }
-})
+}) 
+
 
