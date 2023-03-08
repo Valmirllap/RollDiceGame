@@ -11,7 +11,7 @@ const diceRoll = document.querySelector('.dice');
   
 let globalScore, currentScore, activePlayer, playing;
 
-const init = function () {
+const newGame = function () {
   playerScore1.textContent = 0;
   playerScore2.textContent = 0;
   diceRoll.classList.add("hidden");
@@ -20,14 +20,14 @@ const init = function () {
   activePlayer = 0;
   playing = true;
 
-
   playerCurrent1.textContent = 0;
   playerCurrent2.textContent = 0;
-  
+  player1.classList.remove('winner');
+  player2.classList.remove('winner')
   player1.classList.add('player--active');
   player2.classList.remove('player--active');
 }
-init();
+newGame();
 
 const nextPlayer = function () {
   document.getElementById(`current-${activePlayer}`).textContent = 0;
@@ -56,9 +56,8 @@ btnHold.addEventListener(`click`, function () {
   if(playing) {
     globalScore[activePlayer] += currentScore;
     document.getElementById(`score-${activePlayer}`).textContent = globalScore[activePlayer];
-    if (globalScore[activePlayer] >= 10){
+    if (globalScore[activePlayer] >= 100){
       playing = false
-      document.querySelector(`#name-${activePlayer}`).textContent = 'WINNER !'
       document.querySelector(`.player--${activePlayer}`).classList.add('winner');
       document.querySelector(`.player--${activePlayer}`).classList.remove('.player--active');
       diceRoll.classList.add('hidden');
@@ -67,4 +66,5 @@ btnHold.addEventListener(`click`, function () {
   }
 }) 
 
+btnNew.addEventListener('click', newGame);
 
