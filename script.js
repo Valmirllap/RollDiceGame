@@ -59,6 +59,7 @@ btnHold.addEventListener(`click`, function () {
     if (globalScore[activePlayer] >= 100){
       playing = false
       document.querySelector(`.player--${activePlayer}`).classList.add('winner');
+      document.querySelector(`.name`).textContent = "Winner!"
       document.querySelector(`.player--${activePlayer}`).classList.remove('.player--active');
       diceRoll.classList.add('hidden');
     }

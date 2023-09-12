@@ -147,6 +147,7 @@ i {
 
 .winner {
   background-color: gold;
+  font-size: 25px;
 }
 .winner .name, .winner .score {
   font-weight: 700;
